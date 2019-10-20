@@ -1,8 +1,10 @@
 <div>
   <div id="chatContainer">
-    Your message: <input [(ngModel)]="messageText"/>
+    Name: <input [(ngModel)]="nameText"/><br>
+    Message: <input [(ngModel)]="messageText"/>
     <button (click)="sendMessage()">Send</button>
-    <div class="container" *ngFor="let item of messages.slice().reverse() ">
+    <div class="container" *ngFor="let item of messages.slice().reverse()">
+      <p>{{item.name}}</p>
       <p>{{item.msg}}</p>
       <span class="time-right">{{item.timeStamp}}</span>
     </div>
